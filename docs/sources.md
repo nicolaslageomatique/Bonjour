@@ -1,4 +1,4 @@
-# Les sources géomatiques en urbanisme.
+# Les sources géomatiques en urbanisme
 
 ## [Les Geoservices de l'IGN](https://geoservices.ign.fr/catalogue)
 
