@@ -243,3 +243,35 @@ Date à laquelle l'enregistrement de métadonnées a été créé ou actualisé.
 C'est la langue dans laquelle les éléments de métadonnées sont exprimés.
 
 ---
+
+### Le XML (eXtensible Markup Language)
+
+Les métadonnées sont stockées au format XML :
+- Un standard (ISO 19139) pour manipuler et échanger sur les différentes plate-formes, sur le web, etc.
+- Structure de balises qui permet d'être reconnu et interpréter par une multitude d'outils.
+- Langage standardisé, simple et configurable.
+
+## Quels outils pour les métadonnées ?
+
+### Outils de création de métadonnées:
+
+- Excel, Acces, Libre Office base
+- QGIS, Propriétés de la couche/Métadonnées, plugin PgMetadata (en lien avec lizmap), QSphere, **Plume** (vraiment pas mal Plume)
+- ArcCatalogue (ESRI)
+
+### Outils de catalogage:
+
+- GeoNetwork :
+
+GeoNetwork est une solution de catalogage Open Source de gestion des métadonnées SIG en mode client / serveur. Elle se base sur de nombreuses normes internationales pour le stockage et l'échange de métadonnées (ISO, OGC, etc.). C'est une application en très fort développement et disposant d'une communauté grandissante. Un site internet : https://geonetwork-opensource.org/
+Exemple : le geocatalogue de la FAO
+
+- CKAN : Compréhensive Knowledge Archive Network
+
+Un solution très utilisée pour les portails open-data (https://africaopendata.org/dataset)
+Un projet Open source dynamique
+
+Remarque : 2 grand types de catalogues
+- Les catalogues Open Data : des catalogues simples
+- Les catalogues de données Géographiques/compatibles INSPIRE, plus complexes
+
