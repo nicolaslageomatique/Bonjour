@@ -256,7 +256,7 @@ Les métadonnées sont stockées au format XML :
 ### Outils de création de métadonnées:
 
 - Excel, Acces, Libre Office base
-- QGIS, Propriétés de la couche/Métadonnées, plugin PgMetadata (en lien avec lizmap), QSphere, **Plume** (vraiment pas mal Plume)
+- QGIS, Propriétés de la couche/Métadonnées, plugin PgMetadata (en lien avec lizmap), QSphere, **Plume** (pas mal Plume mais besoin d'une BDD), Geocat Bridge (pas mal aussi à priori)
 - ArcCatalogue (ESRI)
 
 ### Outils de catalogage:

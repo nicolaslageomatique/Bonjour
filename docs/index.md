@@ -1,4 +1,9 @@
-# Note et données
+# **BONJOUR**
+---
+
+Ceci est mon espace de travail personnel, lis et apprend ou fuis.
+
+
 ---
 
 - [Cadastre](./cadastre.md)
@@ -11,7 +16,11 @@
 
 - [Intéroperabilité](./interoperabilite.md)
 
-- [Les Méradonnées](./metadonnees.md)
+- [Les Métadonnées](./metadonnees.md)
 
 - [La Norme INSPIRE](./directive_inspire.md)
+
+- [OGR-GDAL](.ogr.md)
+
+- [Administrer son serveur de base de données](.admin_bdd.md)
 

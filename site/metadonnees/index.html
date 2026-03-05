@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Les métadonnées - Cadastre</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Les m\u00e9tadonn\u00e9es";
+        var mkdocs_page_input_path = "metadonnees.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Cadastre
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Note et données</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cadastre/">Cadastre</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../directive_inspire/">La directive INSPIRE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../formats/">Formats de données</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ign/">IGN</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../interoperabilite/">Intéropérabilité</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Les métadonnées</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pour-qui-ecrire-des-metadonnees">Pour qui écrire des métadonnées ?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#les-standards-de-metadonnees">Les standards de métadonnées</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#historique">Historique</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#iso-19115">ISO 19115</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#le-dernier-de-la-serie-le-format-dcat">Le dernier de la série : le format DCAT</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quelle-forme-pour-les-metadonnees">Quelle forme pour les métadonnées?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-identification">1. IDENTIFICATION</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#11-intitule-de-la-ressource">1.1. Intitulé de la ressource</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#12-resume-de-la-ressource">1.2. Résumé de la ressource</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#13-type-de-ressource">1.3. Type de ressource</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#14-localisateur-de-la-ressource">1.4. Localisateur de la ressource</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#15-identificateur-de-ressource-unique">1.5. Identificateur de ressource unique</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#16-ressource-couplee">1.6. Ressource couplée</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#17-langue-de-la-ressource">1.7. Langue de la ressource</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-classification-des-donnees-et-services-geographiques">2. CLASSIFICATION DES DONNÉES ET SERVICES GÉOGRAPHIQUES</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-categorie-thematique">2.1. Catégorie thématique</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-type-de-service-de-donnees-geographiques">2.2. Type de service de données géographiques</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-mot-cle">3. MOT CLÉ</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-situation-geographique">4. SITUATION GÉOGRAPHIQUE</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#41-rectangle-de-delimitation-geographique">4.1. Rectangle de délimitation géographique</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-reference-temporelle">5. RÉFÉRENCE TEMPORELLE</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#51-etendue-temporelle">5.1. Étendue temporelle</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#52-date-de-publication">5.2. Date de publication</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#53-date-de-derniere-revision">5.3. Date de dernière révision</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#54-date-de-creation">5.4. Date de création</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-qualite-et-validite">6. QUALITÉ ET VALIDITÉ</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#61-genealogie">6.1. Généalogie</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#62-resolution-spatiale">6.2. Résolution spatiale</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-conformite">7. CONFORMITÉ</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#71-specification">7.1. Spécification</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#72-degre">7.2. Degré</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#8-contraintes-en-matiere-dacces-et-dutilisation">8. CONTRAINTES EN MATIÈRE D'ACCÈS ET D'UTILISATION</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#81-conditions-applicables-a-lacces-et-a-lutilisation">8.1. Conditions applicables à l'accès et à l'utilisation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#82-restrictions-concernant-lacces-public">8.2. Restrictions concernant l'accès public</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#9-organisations-responsables-de-letablissement-de-la-gestion-de-la-maintenance-et-de-la-diffusion-des-series-et-des-services-de-donnees-geographiques">9. ORGANISATIONS RESPONSABLES DE L'ÉTABLISSEMENT, DE LA GESTION, DE LA MAINTENANCE ET DE LA DIFFUSION DES SÉRIES ET DES SERVICES DE DONNÉES GÉOGRAPHIQUES</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#91-partie-responsable">9.1. Partie responsable</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#92-role-de-la-partie-responsable">9.2. Rôle de la partie responsable</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#10-metadonnees-concernant-les-metadonnees">10. MÉTADONNÉES CONCERNANT LES MÉTADONNÉES</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#101-point-de-contact-des-metadonnees">10.1. Point de contact des métadonnées</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#102-date-des-metadonnees">10.2. Date des métadonnées</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#103-langue-des-metadonnees">10.3. Langue des métadonnées</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#le-xml-extensible-markup-language">Le XML (eXtensible Markup Language)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#quels-outils-pour-les-metadonnees">Quels outils pour les métadonnées ?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#outils-de-creation-de-metadonnees">Outils de création de métadonnées:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#outils-de-catalogage">Outils de catalogage:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ogr/">OGR-GDAL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sources/">Les sources géomatiques en urbanisme</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Cadastre</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Les métadonnées</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="les-metadonnees">Les métadonnées</h1>
+<p>[...]</p>
+<h2 id="pour-qui-ecrire-des-metadonnees">Pour qui écrire des métadonnées ?</h2>
+<p>Différents publics donc différents besoins</p>
+<ul>
+<li>Soi-même<ul>
+<li>Prises de notes, garder des traces</li>
+</ul>
+</li>
+<li>
+<p>Collègues</p>
+<ul>
+<li>Savoir qu'elle existe (ne pas refaire le boulot 2 fois)</li>
+<li>Auteur ? De quoi est faite le donnée ?</li>
+</ul>
+</li>
+<li>
+<p>Partenaires (organismes, entreprises)</p>
+<ul>
+<li>Droits d’utilisation ?</li>
+<li>Qui contacter ?</li>
+<li>Comment obtenir la donnée ?</li>
+</ul>
+</li>
+<li>
+<p>Etat, Union Européenne</p>
+<ul>
+<li>Contraintes de catalogage</li>
+<li>Besoin d'interopérabilité transfrontalière (INSPIRE)</li>
+</ul>
+</li>
+</ul>
+<h2 id="les-standards-de-metadonnees">Les standards de métadonnées</h2>
+<p>Trois standards principaux pour les métadonnées :
+- ISO 19115 : normalise le contenu des métadonnées
+- ISO 19139 : normalise la syntaxe xml des métadonnées
+- Catalogue Service for Web (CS-W) : permet d'interroger et lire un géo-catalogue en ligne</p>
+<h3 id="historique">Historique</h3>
+<p>La norme ISO 19115 a été publiée en 2003.</p>
+<p>Début 2005, cette norme a été adoptée comme norme européenne sous l'appellation EN ISO 19115. Elle a fait l'objet d'un profil français, dé##### fini par un groupe de travail CNIG-DGME. Ce profil a été validé en commission des référentiels du CNIG en mi 2006.</p>
+<p>Dans une démarche similaire à celle qui avait présidé au développement de REPORTS, la DGME a jugé important de faire développer un outil libre de catalogage, Géosource, afin de faciliter l'appropriation de la norme ISO 19115 et son usage par le plus grand nombre d'acteur.</p>
+<p>Enfin, la directive européenne INSPIRE, publiée en 2007, institue la première obligation formelle de disposer de métadonnées ISO 19115 harmonisées, libres d'accès, afin de faciliter l'usage des données géographiques liées à l'environnement. Elle en fait un des pivots de son infrastructure géographique.</p>
+<h3 id="iso-19115">ISO 19115</h3>
+<p>ISO 19115 : le plus utilisé en Europe</p>
+<p>Le standard ISO 19115 a été sélectionné par INSPIRE comme base pour la création de métadonnées (voir guide technique INSPIRE sur la règle de mise en œuvre des métadonnées).</p>
+<ul>
+<li>Comporte plus de 300 entrées de métadonnées<ul>
+<li>22 de ces entrées constituent le profil ISO Core, le noyau du standard<ul>
+<li>Profil Core ISO (22 éléments = 7 obligatoires et 15 optionnels)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Les critères obligatoires permettent de répondre aux questions : Qui ? Quoi ? Quand ? Où ? relatives à la données. Les critères optionnels servent à garantir l'interopérabilité de la données.</p>
+<h3 id="le-dernier-de-la-serie-le-format-dcat">Le dernier de la série : le format DCAT</h3>
+<p>L'ambition de DCAT est de faciliter l'interopérabilité entre les catalogues et les données publiés sur le web via l'utilisation de la syntaxe RDF (Resource Description Framework, c'est le langage de base du Web Sémantique).</p>
+<p>Discuté depuis 2016, publié en 2019 et une version 3 en 2024.</p>
+<p>DCAT-AP : Data Catalog Vocabulary - Application Profile</p>
+<ul>
+<li>La documentation officielle de description de la norme DCAT : https://www.w3.org/TR/vocab-dcat-3/</li>
+<li>La documentation de data.gouv.fr :  https://doc.data.gouv.fr/moissonnage/dcat/</li>
+<li>Les résultats des travaux des groupes de travail est consultable sur le dépôt Github. Exemple ici du mappage des items Inspire vers le DCAT : https://github.com/cnigfr/metadonnee/tree/main/MappingINSPIRE-DCAT</li>
+</ul>
+<h2 id="quelle-forme-pour-les-metadonnees">Quelle forme pour les métadonnées?</h2>
+<p>Dans le cadre de la norme ENV ISO 19115, les métadonnées portent plus particulièrement sur le contenu :</p>
+<ul>
+<li>des informations d'identification de la ressource : intitulé, description, dates de référence, version, résumé, intervenants;</li>
+<li>des informations plus techniques : la description de l'étendue géographique de la ressource, des aperçus, des informations sur les emplois possibles, systèmes de projection...</li>
+<li>des informations sur la qualité, organisées en :<ul>
+<li>mesures de qualité relatives aux critères habituels : précision géométrique, temporelle et sémantique, exhaustivité, cohérence logique ;</li>
+<li>informations de généalogie : description des sources et des processus appliqués aux sources;</li>
+</ul>
+</li>
+<li>des informations sur les modalités de diffusion : coût de diffusion, modes d'accès, supports, formats, contraintes légales...</li>
+<li>des informations sur les métadonnées elles mêmes : date de rédaction, auteur, langue...</li>
+</ul>
+<p>Voyons les règles de mise en œuvre des métadonnées et les éléments de métadonnées</p>
+<hr />
+<h4 id="1-identification">1. IDENTIFICATION</h4>
+<h5 id="11-intitule-de-la-ressource">1.1. Intitulé de la ressource</h5>
+<p>Nom caractéristique et souvent unique sous lequel la ressource est connue.</p>
+<h5 id="12-resume-de-la-ressource">1.2. Résumé de la ressource</h5>
+<p>Bref résumé narratif du contenu de la ressource.</p>
+<h5 id="13-type-de-ressource">1.3. Type de ressource</h5>
+<p>Type de ressource décrit par les métadonnées.</p>
+<h5 id="14-localisateur-de-la-ressource">1.4. Localisateur de la ressource</h5>
+<p>Le localisateur de la ressource définit le ou les liens avec la ressource et/ou le lien avec les informations supplémentaires concernant la ressource.</p>
+<p>Le domaine de valeur de cet élément de métadonnées est une chaîne de caractères couramment exprimée sous forme de localisateur de ressource uniforme (Uniform Resource Locator, URL).</p>
+<h5 id="15-identificateur-de-ressource-unique">1.5. Identificateur de ressource unique</h5>
+<p>Une valeur identifiant la ressource de manière unique.</p>
+<p>Le domaine de valeur de cet élément de métadonnées est un code obligatoire sous forme de chaîne de caractères, généralement attribué par le propriétaire des données, et un espace de noms sous forme de chaîne de caractères qui identifie de manière unique le contexte du code d'identification (par exemple le propriétaire des données).</p>
+<h5 id="16-ressource-couplee">1.6. Ressource couplée</h5>
+<p>Si la ressource est un service de données géographiques, cet élément de métadonnées identifie, le cas échéant, la série ou les séries de données géographiques cibles du service grâce à leurs identificateurs de ressource uniques (Unique Resource Identifiers, URI).</p>
+<h5 id="17-langue-de-la-ressource">1.7. Langue de la ressource</h5>
+<p>La langue ou les langues utilisées dans le cadre de la ressource</p>
+<h4 id="2-classification-des-donnees-et-services-geographiques">2. CLASSIFICATION DES DONNÉES ET SERVICES GÉOGRAPHIQUES</h4>
+<h5 id="21-categorie-thematique">2.1. Catégorie thématique</h5>
+<p>Ce champ permet de classer la ressource dans une ou plusieurs catégories d'une liste fermée et internationale, facilitant ainsi la recherche de cette donnée. Il est important d'associer la ressource à la (ou les) thématique la plus pertinente.</p>
+<h5 id="22-type-de-service-de-donnees-geographiques">2.2. Type de service de données géographiques</h5>
+<p>Cas habituels :
+- un service CSW est un « service de recherche »,
+- un service WMS est un « service de consultation »
+- et un service WFS est un « service de téléchargement ».
+- un service WPS faisant du géotraitement (par exemple : chaînage de d'éléments hydrographiques ou croisement de couche) sera de type « autre ».</p>
+<h4 id="3-mot-cle">3. MOT CLÉ</h4>
+<p>Liste de mots-clés (s'inspirer du site https://www.eionet.europa.eu/gemet/en/inspire-themes/)</p>
+<h4 id="4-situation-geographique">4. SITUATION GÉOGRAPHIQUE</h4>
+<h5 id="41-rectangle-de-delimitation-geographique">4.1. Rectangle de délimitation géographique</h5>
+<p>Étendue de la ressource dans l'espace géographique, exprimée sous la forme d'un rectangle de délimitation.</p>
+<p>Ce rectangle de délimitation est défini par les longitudes est et ouest et les latitudes sud et nord en degrés décimaux, avec une précision d'au moins deux chiffres après la virgule.</p>
+<h4 id="5-reference-temporelle">5. RÉFÉRENCE TEMPORELLE</h4>
+<p>Au moins un des éléments de métadonnées indiqués aux points 5.1 à 5.4 devra être fourni.</p>
+<h5 id="51-etendue-temporelle">5.1. Étendue temporelle</h5>
+<p>L'étendue temporelle définit la période de temps couverte par le contenu de la ressource. Cette période peut être exprimée de l'une des manières suivantes :
+- une date déterminée,
+- un intervalle de dates exprimé par la date de début et la date de fin de l'intervalle,
+- un mélange de dates et d'intervalles.</p>
+<h5 id="52-date-de-publication">5.2. Date de publication</h5>
+<p>Date de publication de la ressource lorsqu'elle est disponible ou date d'entrée en vigueur. Il peut y avoir plus d'une date de publication.</p>
+<h5 id="53-date-de-derniere-revision">5.3. Date de dernière révision</h5>
+<p>Date de la dernière révision de la ressource, si la ressource a été révisée. Il ne doit pas y avoir plus d'une date de dernière révision.</p>
+<h5 id="54-date-de-creation">5.4. Date de création</h5>
+<p>Date de création de la ressource. Il ne doit pas y avoir plus d'une date de création.</p>
+<h4 id="6-qualite-et-validite">6. QUALITÉ ET VALIDITÉ</h4>
+<h5 id="61-genealogie">6.1. Généalogie</h5>
+<p>La généalogie fait état de l'historique du traitement et/ou de la qualité générale de la série de données géographiques.</p>
+<p>Le cas échéant, elle peut inclure une information indiquant si la série de données a été validée ou soumise à un contrôle de qualité, s'il s'agit de la version officielle (dans le cas où il existe plusieurs versions) et si elle a une valeur légale.</p>
+<h5 id="62-resolution-spatiale">6.2. Résolution spatiale</h5>
+<p>La résolution spatiale se rapporte au niveau de détail de la série de données. Elle est exprimée comme un ensemble de valeurs de distance de résolution allant de zéro à plusieurs valeurs (normalement utilisé pour des données maillées et des produits dérivés d'imagerie) ou exprimée en échelles équivalentes (habituellement utilisées pour les cartes ou les produits dérivés de cartes).</p>
+<h4 id="7-conformite">7. CONFORMITÉ</h4>
+<p>Les exigences en ce qui concerne la conformité et le degré de conformité avec les règles de mise en œuvre adoptées par INSPIRE :</p>
+<h5 id="71-specification">7.1. Spécification</h5>
+<p>Indication de la référence des règles de mise en œuvre de la directive ou des autres spécifications auxquelles une ressource particulière est conforme.</p>
+<p>Une ressource peut être conforme à plusieurs règles de mise en œuvre adoptées par la directive ou à d'autres spécifications.</p>
+<p>Cette indication inclut au moins le titre et une date de référence (date de publication, date de dernière révision ou de création) des règles de mise en oeuvre adoptées par la directive ou des autres spécifications auxquelles la ressource est conforme.</p>
+<h5 id="72-degre">7.2. Degré</h5>
+<p>Degré de conformité de la ressource par rapport aux règles de mise en œuvre adoptées par la directive ou à d'autres spécifications.</p>
+<h4 id="8-contraintes-en-matiere-dacces-et-dutilisation">8. CONTRAINTES EN MATIÈRE D'ACCÈS ET D'UTILISATION</h4>
+<p>Une contrainte en matière d'accès et d'utilisation peut être l'un des deux éléments suivants ou les deux :</p>
+<h5 id="81-conditions-applicables-a-lacces-et-a-lutilisation">8.1. Conditions applicables à l'accès et à l'utilisation</h5>
+<p>Cet élément de métadonnées définit les conditions applicables à l'accès et à l'utilisation des séries et des services de données géographiques, et, le cas échéant, les frais correspondants.</p>
+<p>Cet élément doit avoir des valeurs. Si aucune condition ne s'applique à l'accès à la ressource et à son utilisation, on utilisera la mention «aucune condition ne s'applique». Si les conditions sont inconnues, on utilisera la mention «conditions inconnues».</p>
+<p>Cet élément fournira aussi des informations sur tout frais éventuel à acquitter pour avoir accès à la ressource et l'utiliser, le cas échéant, ou fera référence à un localisateur de ressource uniforme (Uniform Resource Locator, URL) où il sera possible de trouver des informations sur les frais.</p>
+<h5 id="82-restrictions-concernant-lacces-public">8.2. Restrictions concernant l'accès public</h5>
+<p>Lorsque les producteurs restreignent l'accès public aux séries et aux services de données géographiques, cet élément de métadonnées fournit des informations sur les restrictions et les raisons de celles-ci.</p>
+<p>S'il n'y a pas de restrictions concernant l'accès public, cet élément de métadonnées l'indiquera.</p>
+<h4 id="9-organisations-responsables-de-letablissement-de-la-gestion-de-la-maintenance-et-de-la-diffusion-des-series-et-des-services-de-donnees-geographiques">9. ORGANISATIONS RESPONSABLES DE L'ÉTABLISSEMENT, DE LA GESTION, DE LA MAINTENANCE ET DE LA DIFFUSION DES SÉRIES ET DES SERVICES DE DONNÉES GÉOGRAPHIQUES</h4>
+<h5 id="91-partie-responsable">9.1. Partie responsable</h5>
+<p>Description de l'organisation responsable de l'établissement, de la gestion, de la maintenance et de la diffusion de la ressource.</p>
+<p>Cette description inclut:
+- description sous forme de texte libre,
+- une adresse e-mail de contact sous la forme d'une chaîne de caractères.</p>
+<h5 id="92-role-de-la-partie-responsable">9.2. Rôle de la partie responsable</h5>
+<p>Fonction de l'organisation responsable.</p>
+<p>La norme EN ISO 19115 identifie les responsabilités élémentaires suivantes : le fournisseur, le gestionnaire, le propriétaire, l'utilisateur, le distributeur, le commanditaire, le point de contact, le maître d’œuvre principal (ou d'ensemble), l'exécutant secondaire, l'éditeur et l'auteur.</p>
+<p>Ces responsabilités élémentaires recouvrent d'autres notions très utilisées en France, notamment :
+- Le maître d'ouvrage correspond généralement au commanditaire de la ressource et peut accessoirement en être le propriétaire ;
+- Le producteur en tant que fabricant correspond au maître d’œuvre principal ;
+- L'intégrateur de la ressource peut correspondre au gestionnaire et/ou maître d’œuvre principal de la ressource.</p>
+<h4 id="10-metadonnees-concernant-les-metadonnees">10. MÉTADONNÉES CONCERNANT LES MÉTADONNÉES</h4>
+<h5 id="101-point-de-contact-des-metadonnees">10.1. Point de contact des métadonnées</h5>
+<p>Description de l'organisation responsable de la création et de la maintenance des métadonnées. Cette description inclut:
+- le nom de l'organisation sous forme de texte libre,
+- une adresse e-mail de contact sous la forme d'une chaîne de caractères.</p>
+<h5 id="102-date-des-metadonnees">10.2. Date des métadonnées</h5>
+<p>Date à laquelle l'enregistrement de métadonnées a été créé ou actualisé.</p>
+<h5 id="103-langue-des-metadonnees">10.3. Langue des métadonnées</h5>
+<p>C'est la langue dans laquelle les éléments de métadonnées sont exprimés.</p>
+<hr />
+<h3 id="le-xml-extensible-markup-language">Le XML (eXtensible Markup Language)</h3>
+<p>Les métadonnées sont stockées au format XML :
+- Un standard (ISO 19139) pour manipuler et échanger sur les différentes plate-formes, sur le web, etc.
+- Structure de balises qui permet d'être reconnu et interpréter par une multitude d'outils.
+- Langage standardisé, simple et configurable.</p>
+<h2 id="quels-outils-pour-les-metadonnees">Quels outils pour les métadonnées ?</h2>
+<h3 id="outils-de-creation-de-metadonnees">Outils de création de métadonnées:</h3>
+<ul>
+<li>Excel, Acces, Libre Office base</li>
+<li>QGIS, Propriétés de la couche/Métadonnées, plugin PgMetadata (en lien avec lizmap), QSphere, <strong>Plume</strong> (pas mal Plume mais besoin d'une BDD), Geocat Bridge (pas mal aussi à priori)</li>
+<li>ArcCatalogue (ESRI)</li>
+</ul>
+<h3 id="outils-de-catalogage">Outils de catalogage:</h3>
+<ul>
+<li>GeoNetwork :</li>
+</ul>
+<p>GeoNetwork est une solution de catalogage Open Source de gestion des métadonnées SIG en mode client / serveur. Elle se base sur de nombreuses normes internationales pour le stockage et l'échange de métadonnées (ISO, OGC, etc.). C'est une application en très fort développement et disposant d'une communauté grandissante. Un site internet : https://geonetwork-opensource.org/
+Exemple : le geocatalogue de la FAO</p>
+<ul>
+<li>CKAN : Compréhensive Knowledge Archive Network</li>
+</ul>
+<p>Un solution très utilisée pour les portails open-data (https://africaopendata.org/dataset)
+Un projet Open source dynamique</p>
+<p>Remarque : 2 grand types de catalogues
+- Les catalogues Open Data : des catalogues simples
+- Les catalogues de données Géographiques/compatibles INSPIRE, plus complexes</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../interoperabilite/" class="btn btn-neutral float-left" title="Intéropérabilité"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ogr/" class="btn btn-neutral float-right" title="OGR-GDAL">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../interoperabilite/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ogr/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

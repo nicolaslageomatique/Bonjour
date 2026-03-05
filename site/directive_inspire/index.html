@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>La directive INSPIRE - Cadastre</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "La directive INSPIRE";
+        var mkdocs_page_input_path = "directive_inspire.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Cadastre
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Note et données</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cadastre/">Cadastre</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">La directive INSPIRE</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#historique">Historique</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#principes-de-base">Principes de base</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#construction-de-la-directive">Construction de la directive</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#les-themes-de-donnees">Les thèmes de données</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#les-metadonnees">Les métadonnées</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#les-services-de-reseau">Les services de réseau</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#les-specifications-de-donnees">Les spécifications de données</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#valeur-legale">Valeur légale</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#retranscription-francaise">Retranscription française</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../formats/">Formats de données</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ign/">IGN</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../interoperabilite/">Intéropérabilité</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../metadonnees/">Les métadonnées</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ogr/">OGR-GDAL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sources/">Les sources géomatiques en urbanisme</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Cadastre</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">La directive INSPIRE</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="la-directive-inspire">La directive INSPIRE</h1>
+<h2 id="historique">Historique</h2>
+<p>La directive INSPIRE (<em>Infrastructure for Spatial Information in the European Community</em>) trouve ses origines dans les années 1990, période à laquelle l'Union européenne prend conscience du morcellement des données géographiques entre les États membres. Chaque pays, chaque région, voire chaque administration, produisait et conservait ses propres données spatiales dans des formats incompatibles, rendant toute vision transeuropéenne extrêmement difficile.</p>
+<p>Les premières réflexions formelles émergent au sein de la Commission européenne dès 1998-2000, notamment portées par la Direction générale de l'environnement, qui souhaitait disposer d'une base d'information géographique cohérente pour piloter les politiques environnementales communautaires. Ces travaux aboutissent à la publication de la <strong>directive 2007/2/CE du Parlement européen et du Conseil</strong>, adoptée le <strong>14 mars 2007</strong> et entrée en vigueur le 15 mai 2007.</p>
+<p>Sa mise en œuvre s'est ensuite échelonnée sur plusieurs années, avec des règlements d'exécution adoptés progressivement entre 2008 et 2013, couvrant les métadonnées, l'interopérabilité des données, et les services de réseau. La directive a été renforcée et articulée avec d'autres réglementations européennes, notamment le règlement sur les données ouvertes (2019) et le règlement européen sur la gouvernance des données.</p>
+<hr />
+<h2 id="principes-de-base">Principes de base</h2>
+<p>INSPIRE repose sur un ensemble de principes fondateurs qui guident l'ensemble du dispositif :</p>
+<p><strong>La collecte unique</strong> : les données géographiques ne doivent être saisies qu'une seule fois et maintenues là où cela peut être fait le plus efficacement. Il n'est donc pas question de dupliquer la production de données, mais de rendre accessible ce qui existe déjà.</p>
+<p><strong>L'interopérabilité</strong> : les données doivent pouvoir être combinées de manière transparente depuis différentes sources, à travers les frontières administratives et nationales. Cela implique l'adoption de standards communs de format, de projection, de nomenclature et de modèles de données.</p>
+<p><strong>La disponibilité à tous les niveaux</strong> : les données géographiques doivent être accessibles aux autorités publiques de tous les échelons — européen, national, régional et local — ainsi qu'aux citoyens et aux entreprises.</p>
+<p><strong>La transparence</strong> : les conditions d'accès, les licences et les métadonnées associées aux données doivent être clairement documentées, afin que les utilisateurs sachent exactement ce qu'ils utilisent, d'où cela vient et dans quelles conditions.</p>
+<p><strong>L'environnement comme champ prioritaire</strong> : même si INSPIRE a une portée plus large, la politique environnementale reste le moteur principal de la directive. Les thèmes retenus reflètent directement les besoins de suivi et de reporting en matière d'environnement, d'aménagement du territoire et de développement durable.</p>
+<hr />
+<h2 id="construction-de-la-directive">Construction de la directive</h2>
+<p>La directive s'articule autour de plusieurs piliers techniques et organisationnels :</p>
+<h3 id="les-themes-de-donnees">Les thèmes de données</h3>
+<p>INSPIRE définit <strong>34 thèmes</strong> répartis en trois annexes, correspondant à des catégories de données géographiques que les États membres doivent rendre accessibles :</p>
+<ul>
+<li><strong>Annexe I</strong> (11 thèmes) : données de référence fondamentales, comme les systèmes de coordonnées, les réseaux de transport, l'hydrographie, les unités administratives ou les adresses.</li>
+<li><strong>Annexe II</strong> (4 thèmes) : données également de référence mais nécessitant des spécifications plus complexes, comme l'altitude, la géologie ou l'occupation des terres.</li>
+<li><strong>Annexe III</strong> (19 thèmes) : données thématiques, souvent environnementales, comme les zones protégées, les sols, les risques naturels, la santé et la sécurité des personnes, ou encore les installations de suivi de l'environnement.</li>
+</ul>
+<h3 id="les-metadonnees">Les métadonnées</h3>
+<p>Chaque jeu de données couvert par INSPIRE doit être accompagné de <strong>métadonnées</strong> conformes à des profils précis, dérivés de la norme ISO 19115. Ces métadonnées décrivent le contenu, la qualité, la provenance, les conditions d'accès et d'utilisation des données. Elles sont publiées dans des <strong>catalogues nationaux</strong> interrogeables depuis le géoportail européen.</p>
+<h3 id="les-services-de-reseau">Les services de réseau</h3>
+<p>La directive impose la mise en place de <strong>cinq types de services</strong> accessibles via internet :</p>
+<ul>
+<li>Les <strong>services de découverte</strong> (catalogue, recherche de données)</li>
+<li>Les <strong>services de consultation</strong> (visualisation, de type WMS)</li>
+<li>Les <strong>services de téléchargement</strong> (accès aux données brutes, de type WFS ou ATOM)</li>
+<li>Les <strong>services de transformation</strong> (conversion de formats ou de projections)</li>
+<li>Les <strong>services d'invocation</strong> (déclenchement de traitements)</li>
+</ul>
+<p>Ces services doivent être conformes aux standards de l'OGC (<em>Open Geospatial Consortium</em>) et accessibles gratuitement pour la consultation.</p>
+<h3 id="les-specifications-de-donnees">Les spécifications de données</h3>
+<p>Des <strong>règlements d'interopérabilité</strong> définissent pour chaque thème le modèle de données exact, les listes de valeurs (code lists), les conventions de nommage et les règles de qualité. Ces spécifications sont décrites en UML et encodées en GML (<em>Geography Markup Language</em>).</p>
+<hr />
+<h2 id="valeur-legale">Valeur légale</h2>
+<p>INSPIRE est une <strong>directive européenne</strong>, ce qui lui confère une valeur juridique contraignante pour l'ensemble des États membres. Contrairement à un règlement européen qui s'applique directement, une directive fixe des objectifs à atteindre tout en laissant aux États la liberté de choisir les moyens de transposition dans leur droit national.</p>
+<p>Les organismes du <strong>secteur public</strong> qui produisent ou détiennent des données géographiques relevant des 34 thèmes sont juridiquement tenus de respecter les obligations de la directive, notamment :</p>
+<ul>
+<li>Publier des métadonnées dans les délais prescrits</li>
+<li>Mettre en place les services de réseau réglementaires</li>
+<li>Assurer la conformité de leurs données aux spécifications d'interopérabilité</li>
+</ul>
+<p>Des <strong>dérogations</strong> sont néanmoins prévues, notamment pour des raisons de sécurité nationale, de confidentialité commerciale ou lorsque le coût de mise en conformité serait disproportionné par rapport aux bénéfices attendus.</p>
+<p>La Commission européenne assure le suivi de la mise en œuvre via un mécanisme de <strong>reporting biennal</strong> : chaque État membre doit transmettre un rapport d'avancement évaluant le taux de conformité de ses données et services. En cas de non-respect, la Commission peut engager des <strong>procédures d'infraction</strong> à l'encontre d'un État membre, pouvant mener à des sanctions financières devant la Cour de justice de l'Union européenne.</p>
+<hr />
+<h2 id="retranscription-francaise">Retranscription française</h2>
+<p>La France a transposé la directive INSPIRE par l'<strong>ordonnance n° 2010-1232 du 21 octobre 2010</strong>, complétée par le <strong>décret n° 2011-1780 du 5 décembre 2011</strong> relatif à l'accès aux informations géographiques publiques et à leur partage. Ces textes sont codifiés dans le <strong>Code de l'environnement</strong> (articles L. 127-1 à L. 127-10 et R. 127-1 et suivants).</p>
+<p>L'organisme chargé de la coordination nationale est le <strong>CNIG</strong> (<em>Conseil National de l'Information Géolocalisée</em>), qui réunit les producteurs publics de données, les ministères et les représentants des collectivités territoriales. Il assure le pilotage des groupes de travail thématiques et valide les profils de métadonnées adaptés au contexte français.</p>
+<p>La mise en œuvre opérationnelle repose sur plusieurs acteurs clés :</p>
+<p><strong>L'IGN</strong> (<em>Institut national de l'information géographique et forestière</em>) joue un rôle central en tant que producteur des données de référence (BD TOPO, BD ORTHO, RGE…) et opérateur du <strong>Géoportail</strong>, qui fait office de point d'accès national aux données et services INSPIRE français.</p>
+<p><strong>Le géocatalogue national</strong> (aujourd'hui intégré aux plateformes <strong>geo.data.gouv.fr</strong> et <strong>data.gouv.fr</strong>) centralise les métadonnées des jeux de données conformes, permettant leur découverte depuis le portail européen INSPIRE.</p>
+<p>Les <strong>collectivités territoriales</strong> et les établissements publics sont également des acteurs majeurs, particulièrement pour les thèmes relatifs à l'urbanisme (PLU, zonages réglementaires), aux réseaux et aux risques. Le <strong>Géoportail de l'urbanisme</strong> constitue à ce titre une plateforme phare de mise en conformité INSPIRE pour les documents d'urbanisme.</p>
+<p>Malgré ces avancées, la France — comme la plupart des États membres — accuse encore des retards dans la mise en conformité complète des données, en particulier pour les thèmes de l'Annexe III, souvent portés par des administrations moins outillées techniquement. Les rapports de la Commission soulignent régulièrement des lacunes dans la qualité des métadonnées et l'accessibilité réelle des services de téléchargement.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cadastre/" class="btn btn-neutral float-left" title="Cadastre"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../formats/" class="btn btn-neutral float-right" title="Formats de données">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../cadastre/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../formats/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

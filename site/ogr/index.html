@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>IGN - Cadastre</title>
+    <title>OGR-GDAL - Cadastre</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "IGN";
-        var mkdocs_page_input_path = "ign.md";
+        var mkdocs_page_name = "OGR-GDAL";
+        var mkdocs_page_input_path = "ogr.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -55,10 +55,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="../formats/">Formats de données</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">IGN</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ign/">IGN</a>
                 </li>
               </ul>
               <ul>
@@ -69,8 +67,14 @@
                 <li class="toctree-l1"><a class="reference internal" href="../metadonnees/">Les métadonnées</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../ogr/">OGR-GDAL</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">OGR-GDAL</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#definition">Définition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#une-bibliotheque-pour-les-vecteurs">Une bibliothèque pour les vecteurs</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -91,7 +95,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">IGN</li>
+      <li class="breadcrumb-item active">OGR-GDAL</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -100,13 +104,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="ign">IGN</h1>
+                <h1 id="ogr-gdal">OGR-GDAL</h1>
+<h2 id="definition">Définition</h2>
+<p>GDAL (Geospatial Data Abstraction Library) est une bibliothèque libre permettant de lire et de traiter un très grand nombre de format d'images géographiques (notamment GeoTIFF et ECW) depuis des langages de programmation tels que C, C++, C sharp / .Net, Java, Ruby, VB6, Perl, Python, ou encore le langage statistique R.</p>
+<p>Un sous-ensemble de cette bibliothèque est la bibliothèque OGR permettant d'accéder à la plupart des formats courants de données vectorielles (à l'exception notable d'AutoCAD).</p>
+<p>La version binaire inclut de nombreux utilitaires de conversion et de transformation et de reprojection pour traiter directement les photos ou les vecteurs.</p>
+<p>GDAL/OGR fait partie des projets de la Fondation Open Source Geospatial.</p>
+<p>Cette bibliothèque est un des piliers des systèmes d'informations géographique libres, car elle permet d'assurer la compatibilité avec de nombreux systèmes commerciaux reposant sur des formats propriétaires tout autant que sur les normes de l'Open Geospatial Consortium.</p>
+<h2 id="une-bibliotheque-pour-les-vecteurs">Une bibliothèque pour les vecteurs</h2>
+<p>La bibliothèque OGR Simple Feature est une bibliothèque et outils en ligne de commande, faisant partie de la bibliothèque Utilitaires GDAL.</p>
+<p>Les formats sont aussi nombreux https://gdal.gloobe.org/ogr/formats/index.html#gdal-ogr-formats-index dont les formats ouverts (gpkg) et propriétaires (ArcSDE).</p>
+<p>Il est possible d'utiliser du SQL dans certaines commandes des outils.</p>
+<p>Les outils principaux
+- ogrinfo : à l'instar de gdalinfo, il apporte une série d'information sur le fichier analysé.
+- ogrindex : créer un index de tuile, pour améliorer le chargement ou traitement de la couche indexée (MapServer).
+- ogr2ogr : outils pour convertir des formats vecteurs. Il a la capacité de réaliser différentes opérations supplémentaires comme de la reprojection , des sélections attributaires ou spatiales.</p>
+<p>On retrouve aussi ogr dans QGIS.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../formats/" class="btn btn-neutral float-left" title="Formats de données"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../interoperabilite/" class="btn btn-neutral float-right" title="Intéropérabilité">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../metadonnees/" class="btn btn-neutral float-left" title="Les métadonnées"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sources/" class="btn btn-neutral float-right" title="Les sources géomatiques en urbanisme">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -129,10 +148,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../formats/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../metadonnees/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../interoperabilite/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../sources/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
