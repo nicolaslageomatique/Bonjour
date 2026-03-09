@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Infrastuctures de Données Géographiques - Bonjour</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Infrastuctures de Donn\u00e9es G\u00e9ographiques";
+        var mkdocs_page_input_path = "idg.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Bonjour
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">BONJOUR</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../admin_bdd/">Administrer son serveur de base de données</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../cadastre/">Cadastre</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../directive_inspire/">La directive INSPIRE</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../formats/">Formats de données</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Infrastuctures de Données Géographiques</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#generalites">Généralités</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#definitions">Définitions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#contexte-reglementaire">Contexte réglementaire</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fonctionnalites">Fonctionnalités</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#historique-rapide">Historique rapide</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#enjeux">Enjeux</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#linteroperabilite">L'intéropérabilité</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#animation-accompagnement">Animation &amp; accompagnement</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#des-idg-aux-ecd-espaces-communs-de-donnees">Des IDG aux ECD (Espaces Communs de Données)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#definition-de-lespace-commun-de-donnees">Définition de l'Espace Commun de Données</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mise-en-parallele-avec-les-infrastructures-de-donnees-geographiques-idg">Mise en parallèle avec les Infrastructures de Données Géographiques (IDG)</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#solutions-techniques">Solutions techniques</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#portee-et-limites">Portée et limites</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#portee-et-perimetre-daction">Portée et périmètre d'action</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#delimitation-fonctionnelle-ce-que-loutil-doit-et-ne-doit-pas-faire">Délimitation fonctionnelle : ce que l'outil doit et ne doit pas faire</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mise-en-place-technique">Mise en place technique</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#cycle-de-vie">Cycle de vie</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#analyse-des-risques">Analyse des risques</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ign/">IGN</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../interoperabilite/">Intéropérabilité</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../metadonnees/">Les métadonnées</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../ogr/">OGR-GDAL</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../qualite/">La qualité des données</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../sources/">Les sources géomatiques en urbanisme</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Bonjour</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Infrastuctures de Données Géographiques</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="infrastuctures-de-donnees-geographiques">Infrastuctures de Données Géographiques</h1>
+<hr />
+<h2 id="generalites">Généralités</h2>
+<h3 id="definitions">Définitions</h3>
+<p>Une Infrastructure de Données Géographiques (IDG) se définit comme un écosystème intégré combinant des technologies, des politiques, des normes et des ressources humaines, conçu pour faciliter la production, la découverte, l'accès et l'utilisation de l'information géographique à l'échelle d'un territoire. Loin de se réduire à un simple serveur de cartes, l'IDG agit comme une colonne vertébrale numérique qui interconnecte les producteurs de données (collectivités, services de l'État, secteur privé) et les utilisateurs (citoyens, décideurs, développeurs). Son objectif fondamental est de transformer la donnée brute en information actionnable pour l'aide à la décision, la transparence administrative et l'innovation de services, dans le respect des cadres réglementaires (INSPIRE, Open Data) et des principes de souveraineté.</p>
+<hr />
+<blockquote>
+<p>La notion de catalogage </p>
+<p>Au cœur de toute IDG réside le catalogage, mécanisme technique et organisationnel indispensable à l'intelligibilité du système. Le catalogage ne se limite pas à un inventaire passif ; c'est le processus de création, de maintenance et de diffusion de métadonnées normalisées (selon les normes ISO 19115 ou le profil DCAT-AP) qui décrivent le contexte, la qualité, la sémantique et les conditions d'accès de chaque jeu de données. Techniquement, le catalogue agit comme un moteur d'indexation distribué permettant l'interopérabilité sémantique : il rend les données "trouvables" (Findable) par les humains et les machines, garantit leur traçabilité et assure que l'utilisateur comprend ce qu'il consulte avant même d'y accéder. Sans catalogage rigoureux, l'IDG se réduit à un entrepôt de fichiers obscurs, inexploitables et non conformes aux exigences de partage.</p>
+</blockquote>
+<hr />
+<p>Malgré tout plusieurs définitions sont possibles :</p>
+<p>Définition Wikipédia :
+<em>"Une IDS (Infrastructure de Données Spatiales; ou IDG, Infrastructure de Données Géographiques, en anglais SDI pour Spatial Data Infrastructure) est une organisation qui repose sur des accords de partage, une coordination entre ses membres et des systèmes informatiques qui intègrent un ensemble de services (catalogues, serveurs, logiciels, données, applications, pages web, ...) utilisés pour la gestion de l'information géographique (cartes, orthophotoplans, images satellitaires…)."</em></p>
+<p>Autre définition :
+Une infrastructure de données géographiques est une structure de mutualisation, d'échange et de diffusion de données géographiques à l'échelle d'un territoire et au bénéfice d'acteurs publiques et indirectement des citoyens.</p>
+<p>Typologie des IDG : 
+- IDG généraliste ou territoriale : axés sur une diffusion mutli-thématique en relation avec l'entité territoriale concernée.
+- IDG thématique : se concentrent sur un enjeu territorial (littoral, risques, santes, etc).</p>
+<h3 id="contexte-reglementaire">Contexte réglementaire</h3>
+<ul>
+<li>1978 : loi CADA</li>
+<li>2003 : Directive européenne PSI : réutilisation des informations du secteur public</li>
+<li>2005 : transposition de la directive en ordonnance sur la réutilisation de l'information publique</li>
+<li>2007 : Directive INSPIRE</li>
+<li>2010 : Ordonnance portant diverses dispositions d'adaptation au droit de l'Union Européenne</li>
+<li>2013 : Révision de la directive PSI : élargissement du champ d'application aux musées, bibliothèques, archives.</li>
+<li>2015 : Loi pour une République numérique (France) : renforce l'open data par défaut pour les administrations.</li>
+<li>2016 : Règlement GDPR (RGPD) : impact majeur sur la gestion des données personnelles dans les IDG.</li>
+<li>2019 : Directive UE 2019/1024 (Open Data) : remplace la directive PSI, introduit la notion de "données de haute valeur".</li>
+<li>2021 : Loi Climat et Résilience (France) : renforce l'accès aux données environnementales.</li>
+<li>2022 : Data Governance Act (UE) : cadre pour le partage de données sécurisé et les intermédiaires de données.</li>
+</ul>
+<p>Entre 2015 et 2020 : consensus au sein de l'Afigéo pour considérer que le terme Plateforme de données géographiques désigne <strong>"un dispositif organisationnel et une offre de services s'appuyant sur des outils informatiques de diffusion de données"</strong>. Le terme IDG focalise plutôt sur le volet technique.</p>
+<h3 id="fonctionnalites">Fonctionnalités</h3>
+<p>5 fonctionnalités sont préconisés par le directive INSPIRE :
+- Service de découverte (recherche dans les catalogues de métadonnées)
+- Service de consultation (visualisation des données via WMS, WMTS)
+- Service de téléchargement (accès aux données brutes via WFS, WCS)
+- Service de transformation (conversion de formats, reprojection)
+- Service d'invocation (appels de services chaînés, workflows)</p>
+<h3 id="historique-rapide">Historique rapide</h3>
+<p>2010-2020 : l'accés à la données et son usage (ou non) se développe
+- Plus d'ergonomie
+- Effort de contextualisation
+- Adaptation de l'outil à l'utilisateur
+- Mise en avant des données par l'usage
+- Simplication des descriptions
+- Développement de l'usage des formats plats vs formats SIG (JSON vs SHP)</p>
+<p>Après 2020 : une IDG contributive et sobre (idéalement)
+- Espaces de production collaboratifs
+- Optimisation des fonctionnalitéset dimmensionnement adapté aux usages
+- Structuration d'espaces de partage (notamment pour les données volumineuses)
+- Accompagner et outiller les usages de l'IA</p>
+<h3 id="enjeux">Enjeux</h3>
+<h4 id="linteroperabilite">L'intéropérabilité</h4>
+<p>Concerne trois champs spécifiques :
+- Le champ sémantique : définit le sens, le contenu et la structuration des infirmations en se basant sur un modèle.
+- Le champ géographique : fixe le système géodésique et le projection géographique
+- Le champ informatique : concerne les échanges d'informations entre systèmes informatiques.</p>
+<p>Exemples concrets de standards :
+- Sémantique : Thesaurus (GEMET, INSPIRE), ontologies (GeoSPARQL)
+- Géographique : Systèmes de référence (RGF93, WGS84), projections (Lambert-93)
+- Informatique : Protocoles OGC (WMS, WFS, WCS, WPS), API REST (OGC API Features), formats (GeoJSON, GML, FlatGeobuf)</p>
+<p>Convergence des principes, normes et satandards de l'information géographique avec les principes FAIR (principe de partages de données, il s'applique aux données et aux métadonnées) :
+- Findable : facile à trouver par les humains et les machines.
+- Accessible : une fois les données trouvées, l'utilisateur doit savoir comment y accéder.
+- Interoperable : les données sont interopérables, intégration avec d'autres données, intéropérabilité avec des applications.
+- Reusable : les données doivent être réutilisables pour de futures recherches.</p>
+<h4 id="animation-accompagnement">Animation &amp; accompagnement</h4>
+<p>Constat : evolution des profils des utilisateurs : de moins en moins de spécialistes de la donnée géographique.
+- Accompagner les usages mais aussi les démarches de coprodction / production de (géo-)communs.
+- Fluidifier les connexions entre la géodata et la data (la donnée géo comme donnée "pivot").
+- Poursuivre les travaux pour améliorer l'intéropérabilité.
+- Anticiper les nouveaux besoins.</p>
+<h3 id="des-idg-aux-ecd-espaces-communs-de-donnees">Des IDG aux ECD (Espaces Communs de Données)</h3>
+<h4 id="definition-de-lespace-commun-de-donnees">Définition de l'Espace Commun de Données</h4>
+<p>Un Espace Commun de Données (ou Common Data Space) est un cadre technique et organisationnel conçu pour permettre le partage sécurisé et souverain de données entre plusieurs acteurs au sein d'un secteur d'activité spécifique (énergie, santé, industrie, smart city, etc.).</p>
+<p>Contrairement à un simple stockage centralisé (comme un cloud classique), il ne s'agit pas de rassembler toutes les données en un seul lieu physique, mais de créer un écosystème de confiance où :
+- Les données restent sous le contrôle de leurs producteurs.
+- Des règles de gouvernance communes définissent qui peut accéder à quoi, dans quel but et sous quelles conditions.
+- Des standards techniques assurent l'interopérabilité entre les différents systèmes d'information des participants.</p>
+<p>Cette notion, portée par la stratégie européenne pour les données, vise à créer des "communs numériques" sectoriels pour favoriser l'innovation tout en respectant la souveraineté des données et le RGPD.</p>
+<h4 id="mise-en-parallele-avec-les-infrastructures-de-donnees-geographiques-idg">Mise en parallèle avec les Infrastructures de Données Géographiques (IDG)</h4>
+<p>Les Infrastructures de Données Géographiques (IDG) sont des dispositifs plus anciens (développés depuis les années 1990) qui partagent une philosophie similaire mais avec un périmètre et une finalité distincts.</p>
+<p>On peut considérer l'IDG comme un précurseur sectoriel (le secteur de la géographie) des Espaces Communs de Données.</p>
+<p>Aujourd'hui, la tendance est à la convergence : les futurs Espaces Communs de Données (par exemple pour la "Smart City" ou l'environnement) devront s'appuyer sur les IDG existantes pour la composante géographique de leurs données. L'IDG devient alors une brique fondamentale au sein d'un Espace Commun de Données plus large.</p>
+<p>En résumé, si l'IDG est une autoroute de l'information géographique organisée par territoire, l'Espace Commun de Données est un réseau de confiance thématique organisé par usage, capable de transporter tout type de donnée.</p>
+<h2 id="solutions-techniques">Solutions techniques</h2>
+<p>En 2022, l'Afigéo estimait le nombre de platformes territoriales de données à environ 130.</p>
+<p>On compte 4 principales solutions conçues pour gérer le cycle de vie complet de la donnée géographique : du catalogage des métadonnées à la visualisation cartographique et au téléchargement, souvent en conformité avec la directive INSPIRE.</p>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Type &amp; Licence</th>
+<th>Points Forts</th>
+<th>Limites &amp; Contraintes</th>
+<th>Public Cible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prodige</strong></td>
+<td>Open Source (CeCILL)<br>Écosystème français (CNRS/IGN)</td>
+<td>• Conforme nativement INSPIRE<br>• Forte intégration avec les référentiels français (BD Topo, PLU)<br>• Communauté institutionnelle active</td>
+<td>• Courbe d'apprentissage technique raide<br>• Interface utilisateur parfois perçue comme austère<br>• Nécessite une expertise Java/GeoServer</td>
+<td>Collectivités territoriales, Services de l'État, Établissements publics</td>
+</tr>
+<tr>
+<td><strong>GeoOrchestra</strong></td>
+<td>Open Source (GPL)<br>Communauté internationale</td>
+<td>• Architecture modulaire très flexible (briques indépendantes)<br>• Stack technique moderne (GeoServer, GeoNetwork, PostgreSQL)<br>• Grande capacité de personnalisation</td>
+<td>• Demande de solides compétences DevOps pour le déploiement<br>• Maintenance et mises à jour à la charge de l'intégrateur<br>• Peu de fonctionnalités "clés en main" sans configuration</td>
+<td>Régions, Métropoles, Bureaux d'études spécialisés, Intégrateurs SIG</td>
+</tr>
+<tr>
+<td><strong>ISOGEO</strong></td>
+<td>Propriétaire (Commercial)<br>Éditeur français (Kalis)</td>
+<td>• Solution "clé en main" avec support éditeur dédié<br>• Ergonomie soignée et adaptée aux non-spécialistes<br>• Intégration native avec les outils SIG du marché</td>
+<td>• Coût de licence et de maintenance annuel élevé<br>• Dépendance forte vis-à-vis de l'éditeur (Vendor Lock-in)<br>• Évolutivité limitée aux roadmap de l'éditeur</td>
+<td>Collectivités moyennes sans équipe technique dédiée, Secteur privé</td>
+</tr>
+<tr>
+<td><strong>OneGeoSuite</strong></td>
+<td>Propriétaire (Commercial)<br>Éditeur (OneGeo)</td>
+<td>• Interface moderne et intuitive (UX centrée utilisateur)<br>• Fonctionnalités collaboratives et de partage avancées<br>• Déploiement rapide</td>
+<td>• Écosystème fermé (moins d'interopérabilité avec outils tiers)<br>• Coût proportionnel au nombre d'utilisateurs/fonctionnalités<br>• Moins de transparence sur le code source</td>
+<td>Entreprises, Collectivités cherchant une rapidité de mise en œuvre</td>
+</tr>
+</tbody>
+</table>
+<p>Pour les solutions de diffusion orientées Open data :</p>
+<ul>
+<li>Dataverse</li>
+<li>Ckan</li>
+<li>Udata</li>
+<li>Opendatasaoft</li>
+<li>Koumoul</li>
+</ul>
+<h3 id="portee-et-limites">Portée et limites</h3>
+<h4 id="portee-et-perimetre-daction">Portée et périmètre d'action</h4>
+<p>La conception d'une IDG impose une distinction stratégique claire entre sa portée interne et sa portée externe, car chacune répond à des besoins, des niveaux de sécurité et des architectures distincts.</p>
+<p>La portée interne concerne l'optimisation des flux de données au sein de l'organisation productrice ou d'un consortium de confiance. Elle vise à briser les silos métiers (urbanisme, voirie, environnement, RH) en mutualisant le référentiel géographique commun.
+Sur le plan technique, cette portée privilégie des protocoles natifs souvent lourds mais précis (bases de données spatiales PostgreSQL/PostGIS, formats d'échange propriétaires ou complexes comme le File Geodatabase), une granularité fine des données (y compris les versions de travail non validées) et une sécurité basée sur le réseau d'entreprise (VPN, Active Directory). L'objectif est ici l'efficacité opérationnelle et la cohérence du Système d'Information (SI).</p>
+<p>À l'inverse, la portée externe s'adresse aux partenaires institutionnels, aux prestataires et au grand public. Elle impose une logique de service et de diffusion contrôlée. Techniquement, cela se traduit par la mise en œuvre de services web normalisés par l'OGC (WMS pour la visualisation, WFS pour le téléchargement, WPS pour le traitement) et d'API REST légères.
+La portée externe nécessite des couches de médiation fortes : généralisation cartographique pour la lisibilité, filtrage des données sensibles (défense, vie privée, réseaux critiques), gestion des licences (Open License, CC-BY) et robustesse face à la charge. La réussite de cette portée se mesure à l'adoption par la communauté et à la réutilisation des données, et non plus seulement à leur exactitude technique brute.</p>
+<h4 id="delimitation-fonctionnelle-ce-que-loutil-doit-et-ne-doit-pas-faire">Délimitation fonctionnelle : ce que l'outil doit et ne doit pas faire</h4>
+<p>Définir les limites de l'outil est une étape critique de gouvernance qui permet d'éviter l'effet "usine à gaz" et de maîtriser la dette technique. Une IDG n'est pas un Système d'Information Géographique (SIG) de bureau ni un outil de gestion de projet généraliste ; elle est une plateforme de médiation et de service.</p>
+<p><strong>Ce que l'IDG DOIT faire :</strong>
+- Centraliser et indexer : Agir comme le point d'entrée unique pour découvrir les données disponibles via un catalogue de métadonnées à jour.
+- Diffuser et rendre interopérable : Exposer les données via des standards ouverts (OGC, W3C) pour permettre leur intégration dans d'autres applications tierces.
+- Sécuriser et tracer : Garantir l'authentification des utilisateurs, gérer les droits d'accès granulaires (qui voit quoi ?) et conserver les historiques de versionnement et de diffusion.
+- Valoriser : Offrir des outils de visualisation contextuelle (cartes thématiques, tableaux de bord) pour donner du sens à la donnée brute.</p>
+<p><strong>Ce que l'IDG NE DOIT PAS faire (ou éviter de faire) :</strong>
+- Remplacer les outils de production (SIG Desktop) : L'IDG ne doit pas servir à éditer la géométrie fine des objets (dessiner un tronçon de route, corriger un parcellaire). Ces tâches complexes relèvent de logiciels spécialisés (QGIS, ArcGIS Pro) en amont. L'IDG consomme le résultat validé, elle ne le produit pas.
+- Héberger des données "poubelles" ou temporaires : Elle ne doit pas devenir un disque dur réseau déguisé pour stocker des fichiers de travail non documentés, non métadonnés ou obsolètes.
+- Effectuer des traitements métiers lourds en temps réel : Bien qu'elle puisse offrir des services de traitement basiques (reprojection, découpe), l'IDG ne doit pas se substituer à des moteurs d'analyse spécialisés ou à des outils de Business Intelligence dédiés à la modélisation complexe.
+- Gérer la relation client ou la gestion de projet : Les fonctionnalités de suivi de dossiers, de tickets d'incident ou de planification de travaux doivent rester dans des outils dédiés (CRM, ERP, PGI), l'IDG se contentant d'alimenter ces outils en contexte géographique.</p>
+<p>En somme, la pertinence d'une IDG repose sur sa capacité à dire "non" aux fonctionnalités hors de son cœur de métier (la donnée de référence partagée) pour se concentrer sur sa valeur ajoutée : rendre la donnée fiable, accessible et utile au plus grand nombre.</p>
+<h3 id="mise-en-place-technique">Mise en place technique</h3>
+<p>La mise en œuvre d'une Infrastructure de Données Géographiques (IDG) ne se résume pas au choix d'un logiciel ; elle implique avant tout une décision stratégique sur le modèle de déploiement. Ce choix détermine la répartition des responsabilités entre votre organisation et des prestataires externes, ainsi que le niveau de maîtrise technique requis en interne. On distingue trois approches principales, formant un spectre allant de la délégation totale à l'autonomie complète :</p>
+<ul>
+<li>SAAS (Software as a Service) : La solution est hébergée, maintenue et mise à jour entièrement par un éditeur ou un hébergeur tiers.<ul>
+<li>Avantages : peu de compétences techniques requises, tranquillité d'esprit</li>
+<li>Inconvénients : coût, dépendance vis-a-vis du prestataire, possibilités d'évolutions limitées</li>
+</ul>
+</li>
+<li>Hybride : Une combinaison où certaines briques (souvent le stockage lourd ou la diffusion) sont externalisées, tandis que d'autres (comme la gestion des métadonnées sensibles ou l'annuaire utilisateurs) restent en interne.<ul>
+<li>Avantages : délègue une partie des coûts, indépendant sur l'évolution d'une partie du système</li>
+<li>Inconvénients : besoin en connaissance technique, difficulté à faire communiquer nos outils, dépendant des mises à jour</li>
+</ul>
+</li>
+<li>Auto-géré :  Vous installez et exploitez la solution sur vos propres serveurs (ou dans votre cloud privé).<ul>
+<li>Avantages : maitrise totale, coût contenu, valorisant, permet de s'intégrer dans une communauté</li>
+<li>Inconvénients : solides connaissances nécessaire, piloter un SI, veille cybersécurité</li>
+</ul>
+</li>
+</ul>
+<p>Chaque modèle présente des compromis spécifiques en termes de coûts, de souveraineté des données, de flexibilité et de charge de travail.</p>
+<h4 id="cycle-de-vie">Cycle de vie</h4>
+<p><strong>PDCA : Plan, Do, Check, Act</strong></p>
+<ul>
+<li>Plan (Planifier)<ul>
+<li>Audit des besoins utilisateurs (ateliers, enquêtes)</li>
+<li>Définition de la gouvernance (comité de pilotage, charte de partage)</li>
+<li>Choix des standards et normes (profil de métadonnées, référentiels)</li>
+<li>Plan de financement (subventions, coûts récurrents)</li>
+</ul>
+</li>
+<li>Do (Déployer)<ul>
+<li>Installation et configuration de la plateforme</li>
+<li>Migration/intégration des données existantes</li>
+<li>Formation des administrateurs et utilisateurs</li>
+<li>Communication (site web, événements, réseaux sociaux)</li>
+</ul>
+</li>
+<li>Check (Contrôler)<ul>
+<li>Tableaux de bord d'usage (statistiques de consultation, téléchargement)</li>
+<li>Enquêtes de satisfaction régulières</li>
+<li>Audit de conformité (INSPIRE, RGPD, accessibilité)</li>
+<li>Veille technologique et réglementaire</li>
+</ul>
+</li>
+<li>Act (Améliorer)<ul>
+<li>Plans d'action correctifs</li>
+<li>Évolutions fonctionnelles prioritaires</li>
+<li>Mutualisation des retours d'expérience (réseaux comme l'Afigéo)</li>
+<li>Documentation et capitalisation </li>
+</ul>
+</li>
+</ul>
+<h4 id="analyse-des-risques">Analyse des risques</h4>
+<ul>
+<li>Identification des risques de façon exhaustive</li>
+<li>Evaluation de chaques risques (matrice de criticité des risques)</li>
+<li>Cartographie des risques</li>
+<li>Traitement des risques</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../formats/" class="btn btn-neutral float-left" title="Formats de données"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ign/" class="btn btn-neutral float-right" title="IGN">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../formats/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ign/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
